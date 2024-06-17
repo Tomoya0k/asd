@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videojuegos y Consolas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #e50914;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+        .marquee img {
+            width: 200px;
+            height: auto;
+            display: inline-block;
+            margin-right: 10px;
+            transition: transform 0.2s;
+        }
+        .marquee img:hover {
+            transform: scale(1.1);
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .main-content, .news-content {
+            padding: 20px;
+        }
+        .main-content {
+            flex: 1;
+        }
+        .news-content {
+            max-height: 500px;
+            overflow-y: auto;
+            background-color: #444;
+            margin: 20px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+            border: 2px solid #444;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #333;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        .section img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .section h2, .section h3, .section h4 {
+            color: #e50914;
+        }
+        .section p, .section a {
+            color: #bbb;
+        }
+        .section a {
+            color: #1e90ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .section a:hover {
+            color: #ff4500;
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .marquee img {
+                width: 150px;
+            }
+            .section img {
+                max-width: 80%;
+            }
+        }
+        <style>
+    /* Estilos para el <nav> */
+    nav {
+        background-color: #333;
+        padding: 10px 0;
+        text-align: center; /* Centrar el contenido del <nav> */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex; /* Utilizar flexbox para alinear los elementos */
+        justify-content: center; /* Centrar horizontalmente los elementos */
+    }
+    
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+        color: #e50914;
+    }
+</style>
+
+    </style>
+</head>
+<body onload="alert('Bienvenido a Videojuegos y Consolas!')"></body>
+    <header>
+        <h1>Videojuegos y Consolas</h1>
+        <div class="marquee">
+            <div class="marquee-content">
+                <img src="https://m.media-amazon.com/images/I/41p8FiLGtrL._AC_UF1000,1000_QL80_.jpg" alt="PS5">
+                <img src="https://ss423.liverpool.com.mx/xl/1100132318.jpg" alt="Xbox Series X">
+                <img src="https://m.media-amazon.com/images/I/51Gz7IimgoL._AC_UF1000,1000_QL80_.jpg" alt="Nintendo Switch">
+                <img src="https://cdn1.epicgames.com/offer/f696430be718494fac1d6542cfb22542/EGS_MarvelsSpiderManMilesMorales_InsomniacGamesNixxesSoftware_S2_1200x1600-58989e7116de3f70a2ae6ea56ee202c6" alt="Spider-Man: Miles Morales">
+                <img src="https://image.api.playstation.com/vulcan/img/rnd/202011/1717/GemRaOZaCMhGxQ9dRhnQQyT5.png" alt="Demon's Souls">
+                <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58" alt="Zelda">
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#ps5">PlayStation 5</a></li>
+            <li><a href="#xbox">Xbox Series X</a></li>
+            <li><a href="#switch">Nintendo Switch</a></li>
+            <li><a href="#multiplatform">Juegos Multiplataforma</a></li>
+            <li><a href="#news">Noticias y Lanzamientos Recientes</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="main-content">
+            <div class="section">
+                <h2>PlayStation 5</h2>
+                <img src="https://m.media-amazon.com/images/I/41p8FiLGtrL._AC_UF1000,1000_QL80_.jpg" alt="PlayStation 5">
+                <p>La PlayStation 5 (PS5) es una consola de videojuegos de sobremesa desarrollada por Sony Interactive Entertainment. Fue lanzada en noviembre de 2020.</p>
+            </div>
+            <div class="section" id="ps5">
+            <div class="section">
+                <h3>Juegos Exclusivos de PlayStation 5</h3>
+                <h4>Spider-Man: Miles Morales</h4>
+                <img src="https://cdn1.epicgames.com/offer/f696430be718494fac1d6542cfb22542/EGS_MarvelsSpiderManMilesMorales_InsomniacGamesNixxesSoftware_S2_1200x1600-58989e7116de3f70a2ae6ea56ee202c6" alt="Spider-Man: Miles Morales">
+                <p>Spider-Man: Miles Morales es un juego de acción y aventura desarrollado por Insomniac Games y publicado por Sony Interactive Entertainment. Fue lanzado en noviembre de 2020 para PlayStation 4 y PlayStation 5.</p>
+                <p><a href="https://www.youtube.com/watch?v=gHzuHo80U2M" target="_blank">Ver tráiler de Spider-Man: Miles Morales</a></p>
+                <h4>Demon's Souls</h4>
+                <img src="https://image.api.playstation.com/vulcan/img/rnd/202011/1717/GemRaOZaCMhGxQ9dRhnQQyT5.png" alt="Demon's Souls">
+                <p>Demon's Souls es un juego de rol de acción desarrollado por Bluepoint Games y publicado por Sony Interactive Entertainment. Fue lanzado en noviembre de 2020 para PlayStation 5.</p>
+                <p><a href="https://www.youtube.com/watch?v=jGUtTPRuGak" target="_blank">Ver tráiler de Demon's Souls</a></p>
+            </div>
+            <div class="section" id="xbox">
+            <div class="section">
+                <h2>Xbox Series X</h2>
+                <img src="https://ss423.liverpool.com.mx/xl/1100132318.jpg" alt="Xbox Series X">
+                <p>La Xbox Series X es una consola de videojuegos de sobremesa desarrollada por Microsoft. Fue lanzada en noviembre de 2020 y es conocida por su potente hardware y compatibilidad con juegos de generaciones anteriores.</p>
+            </div>
+            <div class="section">
+                <h3>Juegos Exclusivos de Xbox Series X</h3>
+                <h4>Halo Infinite</h4>
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/copesa/BVPSWA6JGRE3FBZJRQM74YVGGE.jpg" alt="Halo Infinite">
+                <p>Halo Infinite es un juego de disparos en primera persona desarrollado por 343 Industries y publicado por Xbox Game Studios. Fue lanzado en diciembre de 2021 para Xbox One y Xbox Series X/S.</p>
+                <p><a href="https://www.youtube.com/watch?v=HZtc5-syeAk" target="_blank">Ver tráiler de Halo Infinite</a></p>
+                <h4>Forza Horizon 5</h4>
+                <img src="https://store-images.s-microsoft.com/image/apps.28758.13734397844529069.202e3fc9-37d6-4853-a58b-fabe504b71e8.4335e940-f927-4be4-af08-8e689a17bd7a?q=90&w=177&h=177" alt="Forza Horizon 5">
+                <p>Forza Horizon 5 es un juego de carreras desarrollado por Playground Games y publicado por Xbox Game Studios. Fue lanzado en noviembre de 2021 para Xbox One y Xbox Series X/S.</p>
+                <p><a href="https://www.youtube.com/watch?v=FYH9n37B7Yw" target="_blank">Ver tráiler de Forza Horizon 5</a></p>
+            </div>
+            <div class="section" id="switch">
+            <div class="section">
+                <h2>Nintendo Switch</h2>
+                <img src="https://m.media-amazon.com/images/I/51Gz7IimgoL._AC_UF1000,1000_QL80_.jpg" alt="Nintendo Switch">
+                <p>La Nintendo Switch es una consola de videojuegos híbrida desarrollada por Nintendo. Fue lanzada en marzo de 2017 y puede usarse tanto en modo portátil como en modo de consola doméstica.</p>
+            </div>
+            <div class="section">
+                <h3>Juegos Exclusivos de Nintendo Switch</h3>
+                <h4>Animal Crossing: New Horizons</h4>
+                <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000027619/9989957eae3a6b545194c42fec2071675c34aadacd65e6b33fdfe7b3b6a86c3a" alt="Animal Crossing: New Horizons">
+                <p>Animal Crossing: New Horizons es un juego de simulación social desarrollado y publicado por Nintendo. Fue lanzado en marzo de 2020 para Nintendo Switch.</p>
+                <p><a href="https://www.youtube.com/watch?v=5LAKjL3cAEw" target="_blank">Ver tráiler de Animal Crossing: New Horizons</a></p>
+                <h4>Super Mario Odyssey</h4>
+                <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000001130/c42553b4fd0312c31e70ec7468c6c9bccd739f340152925b9600631f2d29f8b5" alt="Super Mario Odyssey">
+                <p>Super Mario Odyssey es un juego de plataformas desarrollado y publicado por Nintendo. Fue lanzado en octubre de 2017 para Nintendo Switch.</p>
+                <p><a href="https://www.youtube.com/watch?v=5kcdRBHM7kM" target="_blank">Ver tráiler de Super Mario Odyssey</a></p>
+            </div>
+            <div class="section" id="multiplatform">
+            <div class="section">
+                <h2>Juegos Multiplataforma Populares</h2>
+                <h3>The Legend of Zelda: Breath of the Wild</h3>
+                <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58" alt="The Legend of Zelda: Breath of the Wild">
+                <p>The Legend of Zelda: Breath of the Wild es un juego de acción y aventura desarrollado y publicado por Nintendo. Fue lanzado en marzo de 2017 para la Nintendo Switch y Wii U.</p>
+                <p><a href="https://www.youtube.com/watch?v=1rPxiXXxftE" target="_blank">Ver tráiler de The Legend of Zelda: Breath of the Wild</a></p>
+                <h3>Cyberpunk 2077</h3>
+                <img src="https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7" alt="Cyberpunk 2077">
+                <p>Cyberpunk 2077 es un juego de rol de acción desarrollado y publicado por CD Projekt. Fue lanzado en diciembre de 2020 para varias plataformas, incluyendo PlayStation 4, Xbox One y PC.</p>
+                <p><a href="https://www.youtube.com/watch?v=8X2kIfS6fb8" target="_blank">Ver tráiler de Cyberpunk 2077</a></p>
+                <h3>Red Dead Redemption 2</h3>
+                <img src="https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png" alt="Red Dead Redemption 2">
+                <p>Red Dead Redemption 2 es un juego de acción y aventura desarrollado y publicado por Rockstar Games. Fue lanzado en octubre de 2018 para PlayStation 4, Xbox One y PC.</p>
+                <p><a href="https://www.youtube.com/watch?v=eaW0tYpxyp0" target="_blank">Ver tráiler de Red Dead Redemption 2</a></p>
+                <h3>The Witcher 3: Wild Hunt</h3>
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202211/0914/TvcIHkYqqln1RGbaFqBeuFp6.jpg" alt="The Witcher 3: Wild Hunt">
+                <p>The Witcher 3: Wild Hunt es un juego de rol de acción desarrollado y publicado por CD Projekt. Fue lanzado en mayo de 2015 para PlayStation 4, Xbox One y PC.</p>
+                <p><a href="https://www.youtube.com/watch?v=ehjJ614QfeM" target="_blank">Ver tráiler de The Witcher 3: Wild Hunt</a></p>
+            </div>
+        </div>
+        <div class="section" id="news">
+        <div class="news-content">
+            <div class="section">
+                <h2>Noticias y Lanzamientos Recientes</h2>
+                <div class="news-item">
+                    <h3>Nueva Expansión para Cyberpunk 2077</h3>
+                    <p>CD Projekt ha anunciado una nueva expansión para Cyberpunk 2077, que incluirá nuevas misiones, personajes y mejoras en el juego. El lanzamiento está previsto para finales de este año.</p>
+                    <p><a href="https://www.hobbyconsolas.com/noticias/cyberpunk-2077-agrega-nuevo-final-expansion-phantom-liberty-cd-projekt-1259966" target="_blank">Leer más</a></p>
+                </div>
+                <div class="news-item">
+                    <h3>Fecha de Lanzamiento de The Legend of Zelda: Tears of the Kingdom</h3>
+                    <p>Nintendo ha confirmado la fecha de lanzamiento de The Legend of Zelda: Tears of the Kingdom para marzo de 2023. Los fans de la serie están ansiosos por explorar la nueva aventura de Link.</p>
+                    <p><a href="https://vandal.elespanol.com/fecha-lanzamiento/switch/the-legend-of-zelda-tears-of-the-kingdom/74464#p-83" target="_blank">Leer más</a></p>
+                </div>
+                <div class="news-item">
+                    <h3>Avances en el Desarrollo de Grand Theft Auto VI</h3>
+                    <p>Rockstar Games ha compartido nuevas imágenes y detalles sobre el desarrollo de Grand Theft Auto VI, prometiendo una experiencia aún más inmersiva y expansiva que sus predecesores.</p>
+                    <p><a href="https://www.levelup.com/articulos/783537/GTA-VI-fecha-de-estreno-plataformas-filtraciones-y-todo-lo-que-sabemos-del-juego-de-Rockstar-Games" target="_blank">Leer más</a></p>
+                </div>
+                <div class="news-item">
+                    <h3>Nuevas Funcionalidades para PlayStation 5</h3>
+                    <p>Sony ha lanzado una actualización de software para PlayStation 5 que añade nuevas funcionalidades y mejora el rendimiento general de la consola.</p>
+                    <p><a href="https://www.playstation.com/es-es/ps5/ps5-features/#:~:text=Descubre%20las%20nuevas%20formas%20de%20jugar%20que%20te,hace%20que%20jugar%20sea%20m%C3%A1s%20f%C3%A1cil%20que%20nunca" target="_blank">Leer más</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>¿Preguntas o Comentarios?</h2>
+        <form action="mailto:ebsxdm@gmail.com" method="post" enctype="text/plain">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    
+</body>
+</html>
